@@ -1,4 +1,4 @@
-@import "{{ site.theme }}";
+@import "{{ jekyll-theme-cayman }}";
 
 #wrap{
 	width:400px;
