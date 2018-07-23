@@ -1,4 +1,178 @@
-@import "{{ jekyll-theme-cayman }}";
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+html {
+  overflow-y: scroll;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.textOver:hover{
+	background-size: 110%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #353535;
+}
+.jsutify{
+	text-align: justify;
+}
+.center{
+	text-align: center;
+}
+.redtext{
+	color: #D24D57;
+}
+.heading1{
+	font-size: 60px;
+	font-weight: 600;
+}
+.logosize{
+	width: 50px;
+	height: 50px;
+	z-index: -1;
+}
+.logosize:hover{
+	fill: #D24D57;
+}
+p{
+	font-size: 16px;
+	text-align: justify;
+}
+
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #353535;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after {
+	content: "";
+	position: absolute;
+	height: 0%;
+	left: 50%;
+	top: 50%;
+	width: 150%;
+	z-index: -1;
+	-webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+	-o-transition: all 0.75s ease 0s;
+	transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover {
+	color: #353535;
+	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+	height: 550%;
+}
+
+a.animated-button:link, a.animated-button:visited {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 20px 15px;
+	color: #353535;
+	font-size:14px;
+	border-radius: 0;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+/* Victoria Buttons */
+
+a.animated-button.bio, a.animated-button.projects, a.animated-button.contact {
+	border: 2px solid #D24D57;
+	/*border: 2px solid white;*/
+	/*border-radius: 100px;*/
+}
+a.animated-button.bio:after {
+	background: #D24D57;
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+
+a.animated-button.projects:after {
+	background: #D24D57;
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(25deg);
+}
+
+a.animated-button.contact:after {
+	background: #D24D57;
+	/*opacity: .5;*/
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.gaia{
+    color: #572C7C;
+}
+.melonomics{
+    color: #FF7D11;
+}
+.prgdb{
+    color: #3c753d;
+}
+
+footer div {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+footer {
+	display:flex;
+	padding: 10%;
+}
+p{
+	font-size: 20px;
+}
+.section{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+.space{
+    padding-left:2em;
+}
+.skype{
+    width:200px;
+    height:100px;
+}
+
+
 
 #wrap{
 	width:400px;
