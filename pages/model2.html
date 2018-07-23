@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Calculadora Modelo 2</title>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload='hideTotal();'>
+   <div class="container", id="title">
+	<h1 class="heading1 center"> Calculator Model 2: Exitus 24h </h1> 
+    </div>
+	  
+    <div id="wrap">
+        <form action="" id="totprob" onsubmit="return true;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Exitus probability</legend>
+               
+               <!-- continuous variables -->
+                <p> <label class="slidecontainer" >Edadges</label>
+                <input type="range" min="20" max="40" value="30" class="slider" id="Edadges" onchange=updateSliders(2) />
+                  <span>VALUE</span>
+                  <span id="Edadges_value"></span><br/>
+                </p>
+               
+                <p> <label class="slidecontainer" >Peso (g)</label>
+                <input type="range" min="0" max="1500" value="750" class="slider" id="Peso100" onchange=updateSliders(2) />
+                  <span>VALUE</span>
+                  <span id="Peso100_value"></span><br/>
+                </p>
+                
+                <p> <label class="slidecontainer" >Temperatura Ingreso </label>
+                <input type="range" min="15" max="45" value="36" class="slider" id="Temping" onchange=updateSliders(2) />
+                  <span>VALUE</span>
+                  <span id="Temping_value"></span><br/>
+                </p>
+               
+                <p> <label class="slidecontainer" >Apgar5</label>
+                <input type="range" min="0" max="10" value="5" class="slider" id="Apgar5" onchange=updateSliders(2) />
+                  <span>VALUE</span>
+                  <span id="Apgar5_value"></span><br/>
+                </p>
+                <br />     <br />    
+               <table style="width:100%" align="center">
+                  <tr>
+                    <td><!-- Box variables  -->           
+                        <label class="label col-sm-4"  >Cortimat   </label>     <br />    
+                         <select id="Cortimat" name='Cortimat' onchange="calculateTotal_model2();"> 
+                         <option value="No">No</option>
+                         <option value="Parcial">Parcial</option>
+                         <option value="Completo">Completo</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label class="label col-sm-4" >Sexo   </label> <br />         
+                         <select id="Sexo" name='Sexo' onchange="calculateTotal_model2();"> 
+                         <option value="M">M</option>
+                         <option value="F">F</option>
+                        </select>                    
+                    </td> 
+                    <td>
+                        <label class="label col-sm-4" >Nivel Asistencial   </label>   <br />      
+                         <select id="Nivelas" name='Nivelas' onchange="calculateTotal_model2();"> 
+                         <option value="3+">3a+b+c</option>
+                         <option value="Other">Otro</option>
+                        </select>
+                    </td>
+                  </tr>
+                  <tr>
+                     <td>
+                     <!-- Yes no  variables  -->            
+                     
+                        <p> <label for='Toxemia' class="label col-sm-4">Toxemia</label> <br />    
+                        <input type="checkbox" id="Toxemia" name='Toxemia' onclick="calculateTotal_model2();" />
+                        </p>
+                     </td>
+                     <td>         
+                        <p> <label for='Reanener' class="label col-sm-4">Reanener</label><br />    
+                        <input type="checkbox" id="Reanener" name='Reanener' onclick="calculateTotal_model2();" />
+                        </p>
+                     </td>
+                     <td>
+                        <p> <label for='Emhgr' class="label col-sm-4">Emhgr</label><br />    
+                        <input type="checkbox" id="Emhgr" name='Emhgr' onclick="calculateTotal_model2();" />
+                        </p>
+                     </td>              
+                  </tr>
+                  <tr>
+                  <td></td>
+                  <td>
+                     <p> <label for='Pmult' class="label col-sm-4">Parto multiple</label><br />    
+                     <input type="checkbox" id="Pmult" name='Pmult' onclick="calculateTotal_model2();" />
+                     </p>                     
+                  </td>
+                  <td></td>
+                  </tr>
+                  
+               
+             </table>
+                            
+            <!-- Results -->
+            <br /> <br /> 
+            <div id="totProb" class="heading1" ></div>
+               </fieldset>
+            </div>
+            
+       
+	     </div><!--End of wrap-->
+      </form>
+   </div><!--End of wrap-->
+</body>
+
+<footer>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index.html" class="btn btn-sm animated-button contact">Home</a> </div>
+        </div>
+        <div class="col-md-4">
+         </div>
+        
+</footer>
+
+
+</html>
