@@ -262,11 +262,9 @@ font-weight:normal;
 $primary: #4F2EDC
 $primary-light: #947ADA
 $gray: #9A9999
-
-html,body
-  height: 100%
   
 .toggle
+{
   position: relative
   display: block
   width: 40px
@@ -285,7 +283,9 @@ html,body
     background: $gray
     border-radius: 8px
     transition: background .2s ease
+ }
   span
+   {
     position: absolute
     top: 0
     left: 0
@@ -308,8 +308,9 @@ html,body
       transform: scale(0)
       opacity: 1
       pointer-events: none
-
+}
 #cbx:checked + .toggle
+ {
   &:before
     background: $primary-light
   span
@@ -321,12 +322,14 @@ html,body
       transform: scale(1)
       opacity: 0
       transition: all .4s ease
-
+}
 //centering toggle
 .center
+{
   position: absolute
   top: calc(50% - 10px)
   left: calc(50% - 20px)
+  }
 
 
 
