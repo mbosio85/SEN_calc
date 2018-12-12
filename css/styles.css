@@ -1,3 +1,75 @@
+*{
+  margin : 0;
+  padding : 0;
+}
+
+  
+  .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;   
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+    margin: 0 auto;
+   
+    
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #4CAF50;
+  cursor: pointer;
+  
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+margin: 0 auto;}
+
+.clear{
+    clear:both;
+}
+
+/* The Magic Float Center Code */
+.centerDiv
+	{
+		width: 60%;
+		height:80%px;
+		margin: 0 auto;
+		background-color:#00A5FF ;
+	}
+	.div1
+	{
+		width: 50%;
+		height:100%;
+		background-color:#A52A2A ;
+		float:left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+	}
+	.div2
+	{
+		width: 50%;
+		height:100%;
+		background-color:#FFA500 ;
+		float:left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+	}
+
+
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
 html {
@@ -17,7 +89,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: #353535;
 }
-.jsutify{
+.justify{
 	text-align: justify;
 }
 .center{
@@ -65,49 +137,47 @@ a.animated-button:link, a.animated-button:visited {
 	transition: all 1s ease;
 }
 a.animated-button:link:after, a.animated-button:visited:after {
-	content: "";
+  content: "";
 	position: absolute;
-	height: 0%;
+  height: 0%;
 	left: 50%;
-	top: 50%;
+  top: 50%;
 	width: 150%;
-	z-index: -1;
-	-webkit-transition: all 0.75s ease 0s;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
 	-moz-transition: all 0.75s ease 0s;
-	-o-transition: all 0.75s ease 0s;
-	transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
 }
 a.animated-button:link:hover, a.animated-button:visited:hover {
-	color: #353535;
+  color: #353535;
 	text-shadow: none;
 }
 a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
-	height: 550%;
+  height: 550%;
 }
-
 a.animated-button:link, a.animated-button:visited {
-	position: relative;
+  position: relative;
 	display: block;
-	margin: 30px auto 0;
-	padding: 20px 15px;
+  margin: 30px auto 0;
+  padding: 20px 15px;
 	color: #353535;
-	font-size:14px;
+  font-size:14px;
 	border-radius: 0;
-	font-weight: bold;
+  font-weight: bold;
 	text-align: center;
-	text-decoration: none;
+  text-decoration: none;
 	text-transform: uppercase;
-	overflow: hidden;
+  overflow: hidden;
 	letter-spacing: .08em;
-	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
 	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 /* Victoria Buttons */
-
 a.animated-button.bio, a.animated-button.projects, a.animated-button.contact {
 	border: 2px solid #D24D57;
 	/*border: 2px solid white;*/
@@ -138,13 +208,13 @@ a.animated-button.contact:after {
 	transform: translateX(-50%) translateY(-50%);
 }
 .gaia{
-    color: #572C7C;
+  color: #572C7C;
 }
 .melonomics{
-    color: #FF7D11;
+  color: #FF7D11;
 }
 .prgdb{
-    color: #3c753d;
+  color: #3c753d;
 }
 
 footer div {
@@ -156,9 +226,8 @@ footer {
 	display:flex;
 	padding: 10%;
 }
-p{
-	font-size: 20px;
-}
+
+/*  format don't know where from */
 .section{
     display:flex;
     align-items:center;
@@ -174,166 +243,86 @@ p{
 
 
 
-#wrap{
-	width:600px;
-	margin:0 auto;
-	text-align:left;
-	margin-top:8px;
-	padding:5px;
-	background:#fff;
-    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
-	font-size:13px;    
-    line-height:16px;
-}
-#wrap .cont_details fieldset,.cont_order fieldset{
-	margin:10px;
-	padding:20px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
-}
-#wrap legend{
-	font-size:16px;
-	font-family:Georgia, "Times New Roman", Times, serif;
-	color:#000;
-	font-weight:bold;
-	font-style:italic;
-    padding-bottom:10px;
-}
-#wrap .cont_details input{
-	margin-bottom:10px;
-	color:#000;
-}
-#wrap .input1:hover,.input1:active{
-	
-}
-#wrap label{
-	display:block;
-	font-size:12px;
-	color:#000;
-    font-weight:bold;
-}
-#wrap label.inlinelabel
-{
-    display:inline;
-}
-#wrap .cont_order input{
-	margin-bottom:5px;
-}
-#wrap .cont_order p{
-	padding-top:5px;
-}
 
-#wrap input[type="radio"]
-{
-margin-top:8px;
-margin-bottom:8px;
-}
-
-#wrap input[type="text"]:hover,
-#wrap input[type="text"]:active {
-background-color: #FAF398;
-}
-
-#wrap input#submit
-{
-margin:10px;
-padding-left:20px;
-padding-right:20px;
-padding-top:10px;
-padding-bottom:10px;
-}
-
-#wrap div#totalPrice
-{
-    padding:10px;
-    font-weight:bold;
-    background-color:#ff0;
-}
-
-#wrap label.radiolabel
-{
-font-weight:normal;
- display:inline;
-}
-
-
-$primary: #4F2EDC
-$primary-light: #947ADA
-$gray: #9A9999
+/* switch */
+$primary: #4F2EDC ;
+$primary-light: #947ADA;
+$gray: #9A9999;
   
 .toggle
 {
-  position: relative
-  display: block
-  width: 40px
-  height: 20px
-  cursor: pointer
-  -webkit-tap-highlight-color: transparent
-  transform: translate3d(0,0,0)
-  &:before
-    content: ""
-    position: relative
-    top: 3px
-    left: 3px
-    width: 34px
-    height: 14px
-    display: block
-    background: $gray
-    border-radius: 8px
-    transition: background .2s ease
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0,0,0);
+}
+.toggle:before
+  {    content: "";
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
+    display: block;
+    background: $gray;
+    border-radius: 8px;
+    transition: background .2s ease;
  }
   span
    {
-    position: absolute
-    top: 0
-    left: 0
-    width: 20px
-    height: 20px
-    display: block
-    background: white
-    border-radius: 10px
-    box-shadow: 0 3px 8px rgba($gray,.5)
-    transition: all .2s ease
-    &:before
-      content: ""
-      position: absolute
-      display: block
-      margin: -18px
-      width: 56px
-      height: 56px
-      background: rgba($primary,.5)
-      border-radius: 50%
-      transform: scale(0)
-      opacity: 1
-      pointer-events: none
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba($gray,.5);
+    transition: all .2s ease;
+    }
+    span:before
+    {   
+      content: "";
+      position: absolute;
+      display: block;
+      margin: -18px;
+      width: 56px;
+      height: 56px;
+      background: rgba($primary,.5);
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none;
 }
 #cbx:checked + .toggle
  {
   &:before
     background: $primary-light
-  span
-    background: $primary
-    transform: translateX(20px)
-    transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease
-    box-shadow: 0 3px 8px rgba($primary,.2)
+    span
+    background: $primary;
+    transform: translateX(20px);
+    transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
+    box-shadow: 0 3px 8px rgba($primary,.2);
     &:before
-      transform: scale(1)
-      opacity: 0
-      transition: all .4s ease
+      transform: scale(1);
+      opacity: 0;
+      transition: all .4s ease;
 }
 //centering toggle
 .center
 {
-  position: absolute
-  top: calc(50% - 10px)
-  left: calc(50% - 20px)
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 20px);
   }
 
 
 
-/* Tooltip container */
+/* Tooltip container   - This works :) */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -347,15 +336,62 @@ $gray: #9A9999
   background-color: black;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
+   padding: 5px 0;
   border-radius: 6px;
  
   /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
-}
+  }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  }
+
+
+
+
+
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 200px;
+	height: 40px;
+	background: grey;
+	display: block;
+	border-radius: 40px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 40px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 130px;
 }
