@@ -1,3 +1,7 @@
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 *{
   margin : 0;
   padding : 0;
@@ -46,14 +50,12 @@ margin: 0 auto;}
 .centerDiv
 	{
 		width: 60%;
-		height:80%px;
-		margin: 0 auto;
+				margin: 0 auto;
 		background-color:#00A5FF ;
 	}
 	.div1
 	{
 		width: 50%;
-		height:100%;
 		background-color:#A52A2A ;
 		float:left;
     margin-bottom: 10px;
@@ -62,7 +64,6 @@ margin: 0 auto;}
 	.div2
 	{
 		width: 50%;
-		height:100%;
 		background-color:#FFA500 ;
 		float:left;
     margin-bottom: 10px;
@@ -224,7 +225,10 @@ footer div {
 
 footer {
 	display:flex;
-	padding: 10%;
+	padding: 0%;
+}
+.center{
+	text-align: center;
 }
 
 /*  format don't know where from */
@@ -323,14 +327,14 @@ $gray: #9A9999;
 
 
 /* Tooltip container   - This works :) */
-.tooltip {
+.tooltipx {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.tooltipx .tooltiptextx {
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -345,7 +349,7 @@ $gray: #9A9999;
   }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.tooltipx:hover .tooltiptextx {
   visibility: visible;
   }
 
@@ -363,11 +367,11 @@ input[type=checkbox]{
 label {
 	cursor: pointer;
 	text-indent: -9999px;
-	width: 200px;
-	height: 40px;
+	width: 80px;
+	height: 20px;
 	background: grey;
 	display: block;
-	border-radius: 40px;
+	border-radius: 20px;
 	position: relative;
 }
 
@@ -376,15 +380,15 @@ label:after {
 	position: absolute;
 	top: 0px;
 	left: 5px;
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
 	background: #fff;
-	border-radius: 40px;
+	border-radius: 20px;
 	transition: 0.3s;
 }
 
 input:checked + label {
-	background: #bada55;
+	background: #badaff;
 }
 
 input:checked + label:after {
@@ -393,5 +397,71 @@ input:checked + label:after {
 }
 
 label:active:after {
-	width: 130px;
+	width: 80px;
+}
+
+
+
+/*  menu coritna */
+
+
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
