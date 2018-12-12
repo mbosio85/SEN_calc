@@ -5,148 +5,249 @@
     <title>Calculadora Modelo 2</title>
     <script type="text/javascript" src="../js/app.js"></script>
     <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <script>var modeltype = 4;</script> 
 </head>
 <body onload='hideTotal();'>
    <div class="container", id="title">
-	<h1 class="heading1 center"> Calculator Model 2: Exitus 24h </h1> 
+	<h1 class="heading1 center"> Calculator Model 3: Exitus Time course and symptoms </h1> 
     </div>
 	  
-    <div id="wrap">
+  <div id="centerDiv">
+      <div class="div1">
         <form action="" id="totprob" onsubmit="return true;">
-        <div>
-            <div class="cont_order">
-               <fieldset>
-                <legend>Exitus probability</legend>
-               
-               <!-- continuous variables -->
-                <p> <label class="slidecontainer" >Edadges</label>
-                <input type="range" min="20" max="40" value="30" class="slider" id="Edadges" onchange=updateSliders(4) />
-                  <span>VALUE</span>
-                  <span id="Edadges_value"></span><br/>
-                </p>
-               
-                <p> <label class="slidecontainer" >Peso (g)</label>
-                <input type="range" min="0" max="1500" value="750" class="slider" id="Peso100" onchange=updateSliders(4) />
-                  <span>VALUE</span>
-                  <span id="Peso100_value"></span><br/>
-                </p>
-                
-                <p> <label class="slidecontainer" >Dias</label>
-                <input type="range" min="0" max="120" value="5" class="slider" id="Diastot" onchange=updateSliders(4) />
-                  <span>VALUE</span>
-                  <span id="Diastot_value"></span><br/>
-                </p>
-               
-                <p> <label class="slidecontainer" >Apgar5</label>
-                <input type="range" min="0" max="10" value="5" class="slider" id="Apgar5" onchange=updateSliders(4) />
-                  <span>VALUE</span>
-                  <span id="Apgar5_value"></span><br/>
-                </p>
-                <br />     <br />
-                
-
-               <table style="width:100%" align="center">
-                  <tr>
-                     <td>
-                     <!-- Yes no  variables  -->            
-                     
-                        <p> <label for='Toxemia' class="label col-sm-4">Toxemia</label> <br />    
-                        <input type="checkbox" id="Toxemia" name='Toxemia' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>         
-                        <p> <label for='Cortipre' class="label col-sm-4">Cortipre</label><br />    
-                        <input type="checkbox" id="Cortipre" name='Cortipre' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>
-                        <p> <label for='Emhgr' class="label col-sm-4">Emhgr</label><br />    
-                        <input type="checkbox" id="Emhgr" name='Emhgr' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>              
-                  </tr>
-                  <tr>
-                     <td>       
-                        <p> <label for='Neumot' class="label col-sm-4">Neumot?</label> <br />    
-                        <input type="checkbox" id="Neumot" name='Neumot' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>         
-                        <p> <label for='Entoroco' class="label col-sm-4">Entoroco</label><br />    
-                        <input type="checkbox" id="Entoroco" name='Entoroco' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>
-                        <p> <label for='Sepsisgr' class="label col-sm-4">Sepsis grave</label><br />    
-                        <input type="checkbox" id="Sepsisgr" name='Sepsisgr' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>              
-                  </tr>
-                  
-                  <tr>
-                     <td>       
-                        <p> <label for='Hiv' class="label col-sm-4">Hiv</label> <br />    
-                        <input type="checkbox" id="Hiv" name='Hiv' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>         
-                        <p> <label for='Hivgr' class="label col-sm-4">Hiv grave</label><br />    
-                        <input type="checkbox" id="Hivgr" name='Hivgr' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>
-                        <p> <label for='Dbp' class="label col-sm-4">Dbp ?</label><br />    
-                        <input type="checkbox" id="Dbp" name='Dbp' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>              
-                  </tr>                    
-                  <tr>
-                     <td>       
-                        <p> <label for='Dbpgr' class="label col-sm-4">Dbp grave</label> <br />    
-                        <input type="checkbox" id="Dbpgr" name='Dbpgr' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>         
-                        <p> <label for='Anemia' class="label col-sm-4">Anemia</label><br />    
-                        <input type="checkbox" id="Anemia" name='Anemia' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>
-                     <td>
-                        <p> <label for='Ecngr' class="label col-sm-4">Ecngr ?</label><br />    
-                        <input type="checkbox" id="Ecngr" name='Ecngr' onclick="calculateTotal_model4();" />
-                        </p>
-                     </td>              
-                  </tr>
-                  <tr>
-                     <td>
-                        <p> <label for='Pmult' class="label col-sm-4">Parto multiple</label><br />    
-                        <input type="checkbox" id="Pmult" name='Pmult' onclick="calculateTotal_model4();" />
-                        </p>                     
-                     </td>
-                     <td>
-                        <p> <label for='Lmpvgr' class="label col-sm-4">Lmpvgr</label><br />    
-                        <input type="checkbox" id="Lmpvgr" name='Lmpvgr' onclick="calculateTotal_model4();" />
-                        </p>                     
-                     </td>
-                     <td></td>
-                  </tr>
-             </table>
-                            
-            <!-- Results -->
-            <br /> <br /> 
-            <div id="totProb" class="heading1" ></div>
-               </fieldset>
+         <!-- continuous variables -->
+        <div class='centerDiv'>
+              <div class="tooltipx" >Edadges</div>
+         </div>
+         <div class='centerDiv'>
+               <input type="range" min="20" max="40" value="30" class="slider" id="Edadges" onchange=updateSliders(4) />
+         </div>
+         <div class='centerDiv'>
+            <div class="div1">VALUE
             </div>
-            
-       
-	     </div><!--End of wrap-->
-      </form>
-   </div><!--End of wrap-->
-</body>
+            <div class="div2">
+               <p id="Edadges_value"></p></br>
+            </div>
+         </div>
+         <!-- Peso -->
+             <div class='centerDiv'>
+              <div class="tooltipx" >Peso (g)</div>
+         </div>
+         <div class='centerDiv'>
+               <input type="range" min="0" max="1500" value="7500" class="slider" id="Peso100" onchange=updateSliders(4) />
+         </div>
+         <div class='centerDiv'>
+            <div class="div1">VALUE
+            </div>
+            <div class="div2">
+               <p id="Peso100_value"></p></br>
+            </div>
+         </div>
+      
+         <!-- Temp ingreso -->
+         <div class='centerDiv'>
+            <div class="tooltipx" >Dias ingreso</div>
+         </div>
+         <div class='centerDiv'>
+               <input type="range" min="0" max="120" value="5" class="slider" id="Diastot" onchange=updateSliders(4) />
+         </div>
+         <div class='centerDiv'>
+            <div class="div1">VALUE
+            </div>
+            <div class="div2">
+               <p id="Diastot_value"></p></br>
+            </div>
+         </div>
+    
+         <!-- Apgar 5  -->
+         <div class='centerDiv'>
+           <div class="tooltipx" >Apgar5</div>
+            </div>
+         <div class='centerDiv'>
+               <input type="range" min="0" max="10" value="5" class="slider" id="Apgar5" onchange=updateSliders(4) />
+         </div>
+         <div class='centerDiv'>
+            <div class="div1">VALUE
+            </div>
+            <div class="div2">
+               <p id="Apgar5_value"></p></br>
+            </div>
+         </div>  
+
+              <!-- Yes no  variables  -->            
+              <!-- Toxemia -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Toxemia" </br>
+               <span class="tooltiptextx">Toxemiais this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia'  onchange="calculateTotal_model4();"/>
+               <label for="Toxemia"> Toggle :after </label>
+               </div>
+            </div>
+              
+              <!-- Cortipre -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Cortipre" </br>
+               <span class="tooltiptextx">Cortipre is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Cortipre" name='Cortipre'  onchange="calculateTotal_model4();"/>
+               <label for="Cortipre"> Toggle :after </label>
+               </div>
+            </div>
+          
+
+              <!-- EMhGR -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"EMH Grave" </br>
+               <span class="tooltiptextx">Emhgr is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  onchange="calculateTotal_model4();"/>
+               <label for="Emhgr"> Toggle :after </label>
+               </div>
+            </div>
+          
+              <!-- Neumot -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Neumotorax?" </br>
+               <span class="tooltiptextx">Neumot is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Neumot" name='Neumot'  onchange="calculateTotal_model4();"/>
+               <label for="Neumot"> Toggle :after </label>
+               </div>
+            </div>
+
+              <!-- Eneterocolitis -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Enterocolitis?" </br>
+               <span class="tooltiptextx">Entoroco is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Entoroco" name='Entoroco'  onchange="calculateTotal_model4();"/>
+               <label for="Entoroco"> Toggle :after </label>
+               </div>
+            </div>
+
+              <!-- Sepsisgr -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Sepsis grave?" </br>
+               <span class="tooltiptextx">Sepsisgr is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Sepsisgr" name='Sepsisgr'  onchange="calculateTotal_model4();"/>
+               <label for="Sepsisgr"> Toggle :after </label>
+               </div>
+            </div>
+
+              <!-- Hiv -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Hiv?" </br>
+               <span class="tooltiptextx">Hiv is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Hiv" name='Hiv'  onchange="calculateTotal_model4();"/>
+               <label for="Hiv"> Toggle :after </label>
+               </div>
+            </div>
+     
+              <!-- Hiv grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Hiv? grave" </br>
+               <span class="tooltiptextx">Hivgr is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Hivgr" name='Hivgr'  onchange="calculateTotal_model4();"/>
+               <label for="Hivgr"> Toggle :after </label>
+               </div>
+            </div>
+
+              <!-- Dbpgr grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Dbpgr? " </br>
+               <span class="tooltiptextx">Dbpgr is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Dbpgr" name='Dbpgr'  onchange="calculateTotal_model4();"/>
+               <label for="Dbp"> Toggle :after </label>
+               </div>
+            </div>
+
+              <!-- Dbp grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Dbp? " </br>
+               <span class="tooltiptextx">Dbp is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Dbp" name='Dbp'  onchange="calculateTotal_model4();"/>
+               <label for="Dbp"> Toggle :after </label>
+               </div>
+            </div>
+
+              <!-- Dbp grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Dbp? " </br>
+               <span class="tooltiptextx">Dbp is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Dbp" name='Dbp'  onchange="calculateTotal_model4();"/>
+               <label for="Dbp"> Toggle :after </label>
+               </div>
+            </div>
+
+
+                 <!-- Anemia grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Anemia? " </br>
+               <span class="tooltiptextx">Anemia is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Anemia" name='Anemia'  onchange="calculateTotal_model4();"/>
+               <label for="Anemia"> Toggle :after </label>
+               </div>
+            </div>
+
+
+                 <!-- Ecngr -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Ecngr? " </br>
+               <span class="tooltiptextx">Ecngr is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Ecngr" name='Ecngr'  onchange="calculateTotal_model4();"/>
+               <label for="Ecngr"> Toggle :after </label>
+               </div>
+            </div>
+
+                 <!-- Parto multiple -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Pmult? " </br>
+               <span class="tooltiptextx">Pmult is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  onchange="calculateTotal_model4();"/>
+               <label for="Pmult"> Toggle :after </label>
+               </div>
+            </div>
+
+           <!-- Lmpvgr -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">"Lmpvgr? " </br>
+               <span class="tooltiptextx">Lmpvgr is this and that  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Lmpvgr" name='Lmpvgr'  onchange="calculateTotal_model4();"/>
+               <label for="Lmpvgr"> Toggle :after </label>
+               </div>
+            </div>
+      </br>
+         </form>
+		</div>
+      
+      
+   <div class="div2">
+      <div class="heading1" >Results </div>
+      <div id="totProb" class="heading1" ></div>
+		</div>
+	</div>
+    
+    
+   <div class='clear'></div>
+  </body>
+
+<script type="text/javascript" src="../js/app.js"></script>
 
 <footer>
-
         <div class="col-md-4">
+        </div>
+        <div class="center">
             <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index.html" class="btn btn-sm animated-button contact">Home</a> </div>
         </div>
         <div class="col-md-4">
