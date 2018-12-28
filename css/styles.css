@@ -369,7 +369,7 @@ label {
   content:'';
 	cursor: pointer;
 	content: 'No';
-	text-indent: -300px;
+	text-indent: -9999px;
 	width: 3.5em;
 	height: 1em;
 	background: grey;
@@ -393,7 +393,7 @@ label:after {
 
 input:checked + label {
 	background: #0074D9;
-  text-indent: 0px;
+  text-indent: 2em;
   vertical-align: top;
   content: 'No';
   color: #0074D9;
