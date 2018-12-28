@@ -368,7 +368,8 @@ input[type=checkbox]{
 label {
   content:'';
 	cursor: pointer;
-	text-indent: -9999px;
+	content: 'No';
+	text-indent: -300px;
 	width: 3.5em;
 	height: 1em;
 	background: grey;
@@ -394,7 +395,7 @@ input:checked + label {
 	background: #0074D9;
   text-indent: 0px;
   vertical-align: top;
-  content: 'Si';
+  content: 'No';
   color: #0074D9;
 }
 
