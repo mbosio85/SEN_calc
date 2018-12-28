@@ -17,10 +17,10 @@
         <form action="" id="totprob" onsubmit="return true;">
          <!-- continuous variables -->
         <div class='centerDiv'>
-              <div class="tooltipx" >Edadges</div>
+              <div class="tooltipx" >Edad Gestacional</div>
          </div>
          <div class='centerDiv'>
-               <input type="range" min="20" max="40" value="30" class="slider" id="Edadges" onchange=updateSliders(2) />
+               <input type="range" min="23" max="32" value="28" class="slider" id="Edadges" onchange=updateSliders(2) />
          </div>
          <div class='centerDiv'>
             <div class="div1">VALUE
@@ -31,10 +31,10 @@
          </div>
          <!-- Peso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Peso (g)</div>
+              <div class="tooltipx" >Peso de nacimiento (g)</div>
          </div>
          <div class='centerDiv'>
-               <input type="range" min="0" max="1500" value="7500" class="slider" id="Peso100" onchange=updateSliders(2) />
+               <input type="range" min="400" max="1500" value="800" class="slider" id="Peso100" onchange=updateSliders(2) />
          </div>
          <div class='centerDiv'>
             <div class="div1">VALUE
@@ -46,10 +46,10 @@
       
          <!-- Temp ingreso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Temperatura Ingreso</div>
+              <div class="tooltipx" >Temperatura al Ingreso</div>
          </div>
          <div class='centerDiv'>
-               <input type="range" min="15" max="45" value="36" class="slider" id="Temping" onchange=updateSliders(2) />
+               <input type="range" min="30" max="40" value="36" class="slider" id="Temping" onchange=updateSliders(2) />
          </div>
          <div class='centerDiv'>
             <div class="div1">VALUE
@@ -61,7 +61,7 @@
     
          <!-- Apgar 5  -->
          <div class='centerDiv'>
-           <div class="tooltipx" >Apgar 5</div>
+           <div class="tooltipx" >Apgar a los 5 minutos </div>
             </div>
          <div class='centerDiv'>
                <input type="range" min="0" max="10" value="5" class="slider" id="Apgar5" onchange=updateSliders(2) />
@@ -78,23 +78,23 @@
         
                <!-- Sexo -->
              <div class="centerDiv" >
-               <div class="div1" >Sexo</div>
+               <div class="div1" >G&eacute;nero</div>
                   <div class="div2 custom-select" >
                   <select id="Sexo" name='Sexo' onchange="calculateTotal_model2();"> 
-                     <option value="M">M</option>
-                     <option value="F">F</option>
+                     <option value="M">Masculino</option>
+                     <option value="F">Femenino</option>
                   </select>  
                </div>
                </div>
  
          <!-- Cortimat -->
              <div class="centerDiv" >
-               <div class="div1" >Cortimat</div>
+               <div class="div1" >Corticoides maternos</div>
                   <div class="div2 custom-select" >
                   <select id="Cortimat" name='Cortimat' onchange="calculateTotal_model2();"> 
                     <option value="No">No</option>
-                    <option value="Parcial">Parcial</option>
-                    <option value="Completo">Completo</option>
+                    <option value="Parcial">1 dosis</option>
+                    <option value="Completo">2 dosis o m&aacutes</option>
                   </select>  
                </div>
                </div> -->
@@ -105,8 +105,8 @@
                <div class="div1" >Nivel Asistencial       </div>
                   <div class="div2 custom-select" >
                   <select id="Nivelas" name='Nivelas' onchange="calculateTotal_model2();"> 
-                     <option value="3+">3a+b+c</option>
-                     <option value="Other">Otro</option>
+                     <option value="3+">Nivel 3</option>
+                     <option value="Other">Nivel 2</option>
                   </select>  
                </div>
                </div>
@@ -115,41 +115,41 @@
               <!-- Yes no  variables  -->            
               <!-- Toxemia -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">"Toxemia" </br>
-               <span class="tooltiptextx">Toxemiais this and that  </span>
+                <div class="div1 tooltipx">Toxemia </br>
+               <span class="tooltiptextx">... </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia'  onchange="calculateTotal_model2();"/>
-               <label for="Toxemia"> Toggle :after </label>
+               <label for="Toxemia">  </label>
                </div>
             </div>
               
               <!-- Reanimation energica -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">"Reanimacion energica" </br>
-               <span class="tooltiptextx">Reanener is this and that  </span>
+                <div class="div1 tooltipx">Reanimaci&oacuten en&eacutergica </br>
+               <span class="tooltiptextx">Intubaci&oacuten endotraqueal o compresiones tor&aacutecicas, o adrenalina. </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Reanener" name='Reanener'  onchange="calculateTotal_model2();"/>
-               <label for="Reanener"> Toggle :after </label>
+               <label for="Reanener">  </label>
                </div>
             </div>
     
               <!-- EMhGR energica -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">"EMH Grave" </br>
-               <span class="tooltiptextx">Emhgr is this and that  </span>
+                <div class="div1 tooltipx">Membrana hialina </br>
+               <span class="tooltiptextx">...</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  onchange="calculateTotal_model2();"/>
-               <label for="Emhgr"> Toggle :after </label>
+               <label for="Emhgr"> </label>
                </div>
             </div>
 
               <!-- Pmult -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">"Parto multiple" </br>
-               <span class="tooltiptextx">Pmult is this and that  </span>
+                <div class="div1 tooltipx">Gestaci&oacuten m&uacuteltiple </br>
+               <span class="tooltiptextx">...</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  onchange="calculateTotal_model2();"/>
-               <label for="Pmult"> Toggle :after </label>
+               <label for="Pmult"> </label>
                </div>
             </div>
             </br>
@@ -158,7 +158,7 @@
       
       
    <div class="div2">
-      <div class="heading1" >Results </div>
+      <div class="heading1" >Resultados </div>
       <div id="totProb" class="heading1" ></div>
 		</div>
 	</div>
