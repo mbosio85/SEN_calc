@@ -338,11 +338,15 @@ $gray: #9A9999;
 .tooltipx .tooltiptextx {
   visibility: hidden;
   width: auto;
+  height: auto;
   background-color: black;
   color: #fff;
   text-align: center;
    padding: 5px 0;
   border-radius: 6px;
+  top: 100%;
+  left: 50%; 
+  margin-left: -60px;
  
   /* Position the tooltip text - see examples below! */
   position: absolute;

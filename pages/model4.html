@@ -49,7 +49,7 @@
             <div class="tooltipx" >D&iacuteas de ingreso hospitalario</div>
          </div>
          <div class='centerDiv'>
-               <input type="range" min="0" max="120" value="5" class="slider" id="Diastot" onchange=updateSliders(4) />
+               <input type="range" min="1" max="120" value="5" class="slider" id="Diastot" onchange=updateSliders(4) />
          </div>
          <div class='centerDiv'>
             <div class="div1">VALUE
@@ -77,7 +77,7 @@
               <!-- Yes no  variables  -->            
               <!-- Toxemia -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Toxemia </br>
+                <div class="div1 tooltipx">Hipertensi&oacuten arterial madre </br>
                <span class="tooltiptextx">...</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia'  onchange="calculateTotal_model4();"/>
@@ -87,7 +87,7 @@
               
               <!-- Cortipre -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Corticoides </br>
+                <div class="div1 tooltipx">Corticoides Maternos</br>
                <span class="tooltiptextx">... </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Cortipre" name='Cortipre'  onchange="calculateTotal_model4();"/>
@@ -95,11 +95,20 @@
                </div>
             </div>
           
+            <!-- Parto multiple -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">Gestaci&oacuten m&uacuteltiple </br>
+               <span class="tooltiptextx">  </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  onchange="calculateTotal_model4();"/>
+               <label for="Pmult"> </label>
+               </div>
+            </div>
 
               <!-- EMhGR -->
             <div class="centerDiv" > 
                 <div class="div1 tooltipx">EMH Grave </br>
-               <span class="tooltiptextx">... </span>
+               <span class="tooltiptextx">2 dosis surfactante + soporte con presi&oacuten positiva o dosis surfactante + soporte con presi&oacuten positiva + Fi02 > 0.3 </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  onchange="calculateTotal_model4();"/>
                <label for="Emhgr">  </label>
@@ -113,26 +122,6 @@
                 </div>
                <div class="div2"><input type="checkbox" id="Neumot" name='Neumot'  onchange="calculateTotal_model4();"/>
                <label for="Neumot">  </label>
-               </div>
-            </div>
-
-              <!-- Eneterocolitis -->
-            <div class="centerDiv" > 
-                <div class="div1 tooltipx">Entorocolitis </br>
-               <span class="tooltiptextx">... </span>
-                </div>
-               <div class="div2"><input type="checkbox" id="Entoroco" name='Entoroco'  onchange="calculateTotal_model4();"/>
-               <label for="Entoroco">  </label>
-               </div>
-            </div>
-
-              <!-- Sepsisgr -->
-            <div class="centerDiv" > 
-                <div class="div1 tooltipx">Sepsis grave </br>
-               <span class="tooltiptextx">Hemocultivo + con shock o hipotension o meningitis </span>
-                </div>
-               <div class="div2"><input type="checkbox" id="Sepsisgr" name='Sepsisgr'  onchange="calculateTotal_model4();"/>
-               <label for="Sepsisgr">  </label>
                </div>
             </div>
 
@@ -156,40 +145,17 @@
                </div>
             </div>
 
-              <!-- Dbpgr grave-->
+              <!-- Eneterocolitis -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Displasia broncopulmonar grave</br>
-               <span class="tooltiptextx">Ox&iacutegeno o presi&oacuten de soporte a las 36 semanas de edad postmenstrual </span>
+                <div class="div1 tooltipx">ECN </br>
+               <span class="tooltiptextx">Cualquier grado </span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Dbpgr" name='Dbpgr'  onchange="calculateTotal_model4();"/>
-               <label for="Dbpgr">  </label>
+               <div class="div2"><input type="checkbox" id="Entoroco" name='Entoroco'  onchange="calculateTotal_model4();"/>
+               <label for="Entoroco">  </label>
                </div>
             </div>
 
-              <!-- Dbp -->
-            <div class="centerDiv" > 
-                <div class="div1 tooltipx">Displasia broncopulmonar</br>
-               <span class="tooltiptextx">Ox&iacutegeno a los 28 d&iacuteas</span>
-                </div>
-               <div class="div2"><input type="checkbox" id="Dbp" name='Dbp'  onchange="calculateTotal_model4();"/>
-               <label for="Dbp">  </label>
-               </div>
-            </div>
-
-
-
-                 <!-- Anemia grave-->
-            <div class="centerDiv" > 
-                <div class="div1 tooltipx">Anemia con transfusi&oacuten </br>
-               <span class="tooltiptextx">Requiere transfusi&oacuten de hemat&iacutees </span>
-                </div>
-               <div class="div2"><input type="checkbox" id="Anemia" name='Anemia'  onchange="calculateTotal_model4();"/>
-               <label for="Anemia">  </label>
-               </div>
-            </div>
-
-
-                 <!-- Ecngr -->
+            <!-- Ecngr -->
             <div class="centerDiv" > 
                 <div class="div1 tooltipx">ECN grave </br>
                <span class="tooltiptextx">Con drenaje abdominal o cirug&iacutea abdominal </span>
@@ -198,14 +164,24 @@
                <label for="Ecngr">  </label>
                </div>
             </div>
-
-                 <!-- Parto multiple -->
+            
+              <!-- Sepsisgr -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Gestaci&oacuten m&uacuteltiple </br>
-               <span class="tooltiptextx">Pmult is this and that  </span>
+                <div class="div1 tooltipx">Sepsis grave </br>
+               <span class="tooltiptextx">Hemocultivo + con shock o hipotension o meningitis </span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  onchange="calculateTotal_model4();"/>
-               <label for="Pmult"> </label>
+               <div class="div2"><input type="checkbox" id="Sepsisgr" name='Sepsisgr'  onchange="calculateTotal_model4();"/>
+               <label for="Sepsisgr">  </label>
+               </div>
+            </div>
+
+            <!-- Anemia grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">Anemia con transfusi&oacuten </br>
+               <span class="tooltiptextx">Requiere transfusi&oacuten de hemat&iacutees </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Anemia" name='Anemia'  onchange="calculateTotal_model4();"/>
+               <label for="Anemia">  </label>
                </div>
             </div>
 
@@ -218,6 +194,27 @@
                <label for="Lmpvgr">  </label>
                </div>
             </div>
+            
+              <!-- Dbp -->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">Displasia broncopulmonar</br>
+               <span class="tooltiptextx">Ox&iacutegeno a los 28 d&iacuteas</span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Dbp" name='Dbp'  onchange="calculateTotal_model4();"/>
+               <label for="Dbp">  </label>
+               </div>
+            </div>
+            
+              <!-- Dbpgr grave-->
+            <div class="centerDiv" > 
+                <div class="div1 tooltipx">Displasia broncopulmonar grave</br>
+               <span class="tooltiptextx">Ox&iacutegeno o presi&oacuten de soporte a las 36 semanas de edad postmenstrual </span>
+                </div>
+               <div class="div2"><input type="checkbox" id="Dbpgr" name='Dbpgr'  onchange="calculateTotal_model4();"/>
+               <label for="Dbpgr">  </label>
+               </div>
+            </div>
+
       </br>
          </form>
 		</div>

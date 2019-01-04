@@ -10,12 +10,21 @@ var output = document.getElementById("demo");
  
 // models variants declaration
 // model1 : Prenatal 3 variants
- var model1= [];
-  model1.Intercept=	16.79759;
-  model1.Edadges=-0.64476;
-  model1.Cir10=0.97177;
-  model1.CortimatParcial=-0.69716;
-  model1.CortimatCompleto=-1.07648;
+ var model1old=[];
+  model1old.Intercept=	16.79759;
+  model1old.Edadges=-0.64476;
+  model1old.Cir10=0.97177;
+  model1old.CortimatParcial=-0.69716;
+  model1old.CortimatCompleto=-1.07648;
+
+var model1=[];
+ model1.Intercept=16.76112;
+ model1.Edadges=-0.64483;
+ model1.Cir10=0.97031;
+ model1.CortimatParcial=-0.70134;
+ model1.CortimatCompleto=-1.07892;
+ model1.Sexo=	0.07106;
+ model1.Nivelas=	0.48368;
 
 
 //Model2 : Hospital mortality 24h
@@ -149,6 +158,14 @@ function calculateTotal(model=model1)
                   model.Intercept;
     if(document.forms.totprob.Cir10.checked){
         totProb = totProb + model.Cir10;
+     }
+    
+    if (document.forms.totprob.Nivelas.value == 'Other'){
+         totProb = totProb + model.Nivelas;
+     }
+    
+    if (document.forms.totprob.Sexo.value == 'M'){
+         totProb = totProb + model.Sexo;
      }
           
     totProb = (100)/(1 + Math.exp(-totProb));
