@@ -34,7 +34,7 @@
                 <div class="div1 tooltipx">Peso estimado < P10 </br>
                <span class="tooltiptextx">El peso estimado es menor del percentil 10  </span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Cir10" name='Cir10'  onchange="calculateTotal();"/>
+               <div class="div2"><input type="checkbox" id="Cir10" name='Cir10'  ></input> 
                <label for="Cir10"> </label>
                </div>
             </div>
@@ -43,7 +43,7 @@
              <div class="centerDiv" >
                <div class="div1" >G&eacute;nero</div>
                   <div class="div2 custom-select" >
-                  <select id="Sexo" name='Sexo' onchange="calculateTotal();"> 
+                  <select id="Sexo" name='Sexo'> 
                      <option value="M">Masculino</option>
                      <option value="F">Femenino</option>
                   </select>  
@@ -53,7 +53,7 @@
              <div class="centerDiv" >
                <div class="div1" >Corticoides maternos       </div>
                   <div class="div2 custom-select" >
-                  <select id="Cortimat" name='Cortimat' onclick="calculateTotal();"> 
+                  <select id="Cortimat" name='Cortimat' > 
                     <option value="No">No</option>
                     <option value="Parcial">1 dosis</option>
                     <option value="Completo">2 dosis o m&aacutes </option>
@@ -65,7 +65,7 @@
              <div class="centerDiv" >
                <div class="div1" >Nivel Asistencial       </div>
                   <div class="div2 custom-select" >
-                  <select id="Nivelas" name='Nivelas' onchange="calculateTotal();"> 
+                  <select id="Nivelas" name='Nivelas'> 
                      <option value="3+">Nivel 3</option>
                      <option value="Other">Nivel 2</option>
                   </select>  
@@ -77,7 +77,7 @@
              
          </form>
 		</div>
-		<div class="div2">
+	<div class="div2">
          <div class="heading1" >Resultados </div>
          <div id="totProb" class="heading1" ></div>
 		</div>
@@ -88,13 +88,18 @@
 <script> updateSliders() </script>
 
 <footer>
-         <div class="col-md-4">
+        <div class="col-md-4">
         </div>
         <div class="center">
             <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index.html" class="btn btn-sm animated-button contact">Home</a> </div>
         </div>
-        <div class="col-md-4">
-         </div>
+         <div class="center">
+            <div class="col-md-12 col-sm-4 col-xs-12">
+              <a   class="btn btn-sm animated-button contact" onclick="calculateTotal();">Calc</a> </div>
+        </div>
+                <div class="col-md-4">
+        </div>
+        
 </footer>
 
 

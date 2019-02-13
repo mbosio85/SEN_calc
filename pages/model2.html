@@ -64,7 +64,7 @@
              <div class="centerDiv" >
                <div class="div1" >G&eacute;nero</div>
                   <div class="div2 custom-select" >
-                  <select id="Sexo" name='Sexo' onchange="calculateTotal_model2();"> 
+                  <select id="Sexo" name='Sexo' >
                      <option value="M">Masculino</option>
                      <option value="F">Femenino</option>
                   </select>  
@@ -75,7 +75,7 @@
              <div class="centerDiv" >
                <div class="div1" >Corticoides maternos</div>
                   <div class="div2 custom-select" >
-                  <select id="Cortimat" name='Cortimat' onchange="calculateTotal_model2();"> 
+                  <select id="Cortimat" name='Cortimat' >
                     <option value="No">No</option>
                     <option value="Parcial">1 dosis</option>
                     <option value="Completo">2 dosis o m&aacutes</option>
@@ -88,7 +88,7 @@
              <div class="centerDiv" >
                <div class="div1" >Nivel Asistencial       </div>
                   <div class="div2 custom-select" >
-                  <select id="Nivelas" name='Nivelas' onchange="calculateTotal_model2();"> 
+                  <select id="Nivelas" name='Nivelas' >
                      <option value="3+">Nivel 3</option>
                      <option value="Other">Nivel 2</option>
                   </select>  
@@ -102,7 +102,7 @@
                 <div class="div1 tooltipx">Hipertensi&oacuten arterial madre </br>
                <span class="tooltiptextx">... </span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia'  onchange="calculateTotal_model2();"/>
+               <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia' ></input>
                <label for="Toxemia">  </label>
                </div>
             </div>
@@ -112,7 +112,7 @@
                 <div class="div1 tooltipx">Reanimaci&oacuten en&eacutergica </br>
                <span class="tooltiptextx">Intubaci&oacuten endotraqueal o compresiones tor&aacutecicas, o adrenalina. </span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Reanener" name='Reanener'  onchange="calculateTotal_model2();"/>
+               <div class="div2"><input type="checkbox" id="Reanener" name='Reanener' ></input>
                <label for="Reanener">  </label>
                </div>
             </div>
@@ -122,7 +122,7 @@
                 <div class="div1 tooltipx">Membrana hialina </br>
                <span class="tooltiptextx">...</span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  onchange="calculateTotal_model2();"/>
+               <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  ></input>
                <label for="Emhgr"> </label>
                </div>
             </div>
@@ -132,7 +132,7 @@
                 <div class="div1 tooltipx">Gestaci&oacuten m&uacuteltiple </br>
                <span class="tooltiptextx">...</span>
                 </div>
-               <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  onchange="calculateTotal_model2();"/>
+               <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  ></input>
                <label for="Pmult"> </label>
                </div>
             </div>
@@ -160,8 +160,12 @@
         <div class="center">
             <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index.html" class="btn btn-sm animated-button contact">Home</a> </div>
         </div>
-        <div class="col-md-4">
-         </div>
+         <div class="center">
+            <div class="col-md-12 col-sm-4 col-xs-12">
+              <a   class="btn btn-sm animated-button contact" onclick="calculateTotal_model2();">Calc</a> </div>
+        </div>
+                <div class="col-md-4">
+        </div>
         
 </footer>
 

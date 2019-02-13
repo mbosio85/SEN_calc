@@ -361,22 +361,22 @@ function updateSliders(model=1) {
        updateValue(slider);
    }
    
-switch(model) {
-    case 1:
-        calculateTotal();
-        break;
-    case 2:
-        calculateTotal_model2();
-        break;
-    case 3:
-        calculateTotal_model3();
-        break;
-    case 4:
-      calculateTotal_model4();
-      break;
-    default:
-        calculateTotal();
-}
+   //switch(model) {
+   //    case 1:
+   //        calculateTotal();
+   //        break;
+   //    case 2:
+   //        calculateTotal_model2();
+   //        break;
+   //    case 3:
+   //        calculateTotal_model3();
+   //        break;
+   //    case 4:
+   //      calculateTotal_model4();
+   //      break;
+   //    default:
+   //        calculateTotal();
+   //}
 
    
 }
@@ -420,16 +420,16 @@ for (i = 0; i < x.length; i++) {
             }
             this.setAttribute("class", "same-as-selected");
             
-            if (modeltype ==1 ){
-            calculateTotal();
-              
-            }else {
-              if (modeltype==2){
-                calculateTotal_model2();
-              }else{
-                calculateTotal_model4();
-              }
-            }
+            //if (modeltype ==1 ){
+            //calculateTotal();
+            //  
+            //}else {
+            //  if (modeltype==2){
+            //    calculateTotal_model2();
+            //  }else{
+            //    calculateTotal_model4();
+            //  }
+            //}
             break;
           }
         }

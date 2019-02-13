@@ -121,7 +121,7 @@ p{
 }
 
 /* Global Button Styles */
-a.animated-button:link, a.animated-button:visited {
+a.animated-button:link, a.animated-button:visited, a.animated-button:hover {
 	position: relative;
 	display: block;
 	margin: 30px auto 0;
@@ -141,7 +141,7 @@ a.animated-button:link, a.animated-button:visited {
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }
-a.animated-button:link:after, a.animated-button:visited:after {
+a.animated-button:link:after, a.animated-button:visited:after, a.animated-button:hover:after {
   content: "";
 	position: absolute;
   height: 0%;
@@ -154,11 +154,11 @@ a.animated-button:link:after, a.animated-button:visited:after {
   -o-transition: all 0.75s ease 0s;
   transition: all 0.75s ease 0s;
 }
-a.animated-button:link:hover, a.animated-button:visited:hover {
+a.animated-button:link:hover, a.animated-button:visited:hover, a.animated-button.contact:hover {
   color: #353535;
 	text-shadow: none;
 }
-a.animated-button:link:hover:after, a.animated-button:visited:hover:after {
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after, a.animated-button.contact:hover:after {
   height: 550%;
 }
 a.animated-button:link, a.animated-button:visited {
@@ -183,10 +183,33 @@ a.animated-button:link, a.animated-button:visited {
 }
 
 /* Victoria Buttons */
-a.animated-button.bio, a.animated-button.projects, a.animated-button.contact {
+a.animated-button.bio, a.animated-button.projects {
 	border: 2px solid #0074D9;
 	/*border: 2px solid white;*/
 	/*border-radius: 100px;*/
+}
+a.animated-button.contact{
+  border: 2px solid #0074D9;
+  position: relative;
+	display: block;
+  margin: 30px auto 0;
+  padding: 20px 15px;
+	color: #353535;
+  font-size:14px;
+	border-radius: 0;
+  font-weight: bold;
+	text-align: center;
+  text-decoration: none;
+	text-transform: uppercase;
+  overflow: hidden;
+	letter-spacing: .08em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  
+  
 }
 a.animated-button.bio:after {
 	background: #0074D9;
