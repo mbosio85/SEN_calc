@@ -215,7 +215,7 @@ function calculateTotal_model2(model = model2)
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    divobj.innerHTML = "Exitus %: "+totProb.toFixed(2).replace(".", ",") + "%";
+    divobj.innerHTML = "Exitus: "+totProb.toFixed(2).replace(".", ",") + "%";
 
 }
 
@@ -315,7 +315,7 @@ function calculateTotal_model4(model = model40){
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    divobj.innerHTML = "Exitus %: "+totProb.toFixed(2).replace(".", ",") + "%";
+    divobj.innerHTML = "Exitus: "+totProb.toFixed(2).replace(".", ",") + "%";
  
  
 }
