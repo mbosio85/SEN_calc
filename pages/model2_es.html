@@ -9,7 +9,7 @@
 </head>
 <body onload='updateSliders();'>
    <div class="container", id="title">
-	<h1 class="heading1 center"> Mortality prediction after the first 24 hours</h1> 
+	<h1 class="heading1 center"> Predicci&oacuten mortalidad al primer d&iacutea de vida</h1> 
     </div>
 	  
     <div id="centerDiv">
@@ -17,7 +17,7 @@
         <form action="" id="totprob" onsubmit="return true;">
          <!-- continuous variables -->
         <div class='centerDiv'>
-              <div class="tooltipx" >Gestational age</div>
+              <div class="tooltipx" >Edad Gestacional</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="23" max="32" value="28" class="slider" id="Edadges" onchange=updateSliders(2) />
@@ -27,7 +27,7 @@
          </div>
          <!-- Peso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Birth weight (g)</div>
+              <div class="tooltipx" >Peso de nacimiento (g)</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="400" max="1500" value="800" class="slider" id="Peso100" onchange=updateSliders(2) />
@@ -38,7 +38,7 @@
       
          <!-- Temp ingreso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Admission temperature</div>
+              <div class="tooltipx" >Temperatura al Ingreso</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="30" max="40" value="36" step="0.1" class="slider" id="Temping" onchange=updateSliders(2) />
@@ -49,7 +49,7 @@
     
          <!-- Apgar 5  -->
          <div class='centerDiv'>
-           <div class="tooltipx" >Apgar-5 min </div>
+           <div class="tooltipx" >Apgar a los 5 minutos </div>
             </div>
          <div class='centerDiv'>
                <input type="range" min="0" max="10" value="5" class="slider" id="Apgar5" onchange=updateSliders(2) />
@@ -62,23 +62,23 @@
         
                <!-- Sexo -->
              <div class="centerDiv" >
-               <div class="div1" >Sex</div>
+               <div class="div1" >G&eacute;nero</div>
                   <div class="div2 custom-select" >
                   <select id="Sexo" name='Sexo' >
-                     <option value="M">Male</option>
-                     <option value="F">Femeale</option>
+                     <option value="M">Masculino</option>
+                     <option value="F">Femenino</option>
                   </select>  
                </div>
                </div>
  
          <!-- Cortimat -->
              <div class="centerDiv" >
-               <div class="div1" >Maternal steroids</div>
+               <div class="div1" >Corticoides maternos</div>
                   <div class="div2 custom-select" >
                   <select id="Cortimat" name='Cortimat' >
                     <option value="No">No</option>
-                    <option value="Parcial">Partial</option>
-                    <option value="Completo">Full course</option>
+                    <option value="Parcial">1 dosis</option>
+                    <option value="Completo">2 dosis o m&aacutes</option>
                   </select>  
                </div>
                </div>
@@ -86,11 +86,11 @@
 
                <!-- Nivel Asistencial -->
              <div class="centerDiv" >
-               <div class="div1" >Level of care  </div>
+               <div class="div1" >Nivel Asistencial       </div>
                   <div class="div2 custom-select" >
                   <select id="Nivelas" name='Nivelas' >
-                     <option value="3+">Level 3</option>
-                     <option value="Other">Level 2</option>
+                     <option value="3+">Nivel 3</option>
+                     <option value="Other">Nivel 2</option>
                   </select>  
                </div>
                </div>
@@ -99,7 +99,7 @@
               <!-- Yes no  variables  -->            
               <!-- Toxemia -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Maternal hypertension </br>
+                <div class="div1 tooltipx">Hipertensi&oacuten arterial madre </br>
                <span class="tooltiptextx">... </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia' ></input>
@@ -109,8 +109,8 @@
               
               <!-- Reanimation energica -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Advanced resuscitation </br>
-               <span class="tooltiptextx">Endothraqueal intubation or toracic compression, or adrenaline. </span>
+                <div class="div1 tooltipx">Reanimaci&oacuten en&eacutergica </br>
+               <span class="tooltiptextx">Intubaci&oacuten endotraqueal o compresiones tor&aacutecicas, o adrenalina. </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Reanener" name='Reanener' ></input>
                <label for="Reanener">  </label>
@@ -119,7 +119,7 @@
     
               <!-- EMhGR energica -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe hyialine membrane disease </br>
+                <div class="div1 tooltipx">Membrana hialina </br>
                <span class="tooltiptextx">...</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  ></input>
@@ -129,7 +129,7 @@
 
               <!-- Pmult -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Multiple pregnancy </br>
+                <div class="div1 tooltipx">Gestaci&oacuten m&uacuteltiple </br>
                <span class="tooltiptextx">...</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Pmult" name='Pmult'  ></input>
@@ -142,7 +142,7 @@
       
       
    <div class="div2">
-      <div class="heading1" >Results </div>
+      <div class="heading1" >Resultados </div>
       <div id="totProb" class="heading1" ></div>
 		</div>
 	</div>
@@ -158,7 +158,7 @@
         <div class="col-md-4">
         </div>
         <div class="center">
-            <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index.html" class="btn btn-sm animated-button contact">Home</a> </div>
+            <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index_es.html" class="btn btn-sm animated-button contact">Home</a> </div>
         </div>
          <div class="center">
             <div class="col-md-12 col-sm-4 col-xs-12">

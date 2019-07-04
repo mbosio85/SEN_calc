@@ -9,7 +9,7 @@
 </head>
 <body onload='hideTotal();'>
    <div class="container", id="title">
-	<h1 class="heading1 center"> Mortality prediction during hospital stay</h1> 
+	<h1 class="heading1 center"> Predicci&oacuten mortalidad durante el ingreso hospitalario</h1> 
     </div>
 	  
   <div id="centerDiv">
@@ -17,7 +17,7 @@
         <form action="" id="totprob" onsubmit="return true;">
          <!-- continuous variables -->
         <div class='centerDiv'>
-              <div class="tooltipx" >Gestational age</div>
+              <div class="tooltipx" >Edad gestacional</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="23" max="32" value="28" class="slider" id="Edadges" onchange=updateSliders(4) />
@@ -31,7 +31,7 @@
          </div>
          <!-- Peso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Birth weight (g)</div>
+              <div class="tooltipx" >Peso de nacimiento (g)</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="400" max="1500" value="800" class="slider" id="Peso100" onchange=updateSliders(4) />
@@ -46,7 +46,7 @@
       
          <!-- Temp ingreso -->
          <div class='centerDiv'>
-            <div class="tooltipx" >Days of life</div>
+            <div class="tooltipx" >D&iacuteas de ingreso hospitalario</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="1" max="120" value="5" class="slider" id="Diastot" onchange=updateSliders(4) />
@@ -61,7 +61,7 @@
     
          <!-- Apgar 5  -->
          <div class='centerDiv'>
-           <div class="tooltipx" >Apgar-5 min</div>
+           <div class="tooltipx" >Apgar a los 5 minutos</div>
             </div>
          <div class='centerDiv'>
                <input type="range" min="0" max="10" value="5" class="slider" id="Apgar5" onchange=updateSliders(4) />
@@ -75,7 +75,7 @@
               <!-- Yes no  variables  -->            
               <!-- Toxemia -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Maternal hypertension </br>
+                <div class="div1 tooltipx">Hipertensi&oacuten arterial madre </br>
                <span class="tooltiptextx">...</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Toxemia" name='Toxemia' ></input>
@@ -85,7 +85,7 @@
               
               <!-- Cortipre -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Maternal steroids</br>
+                <div class="div1 tooltipx">Corticoides Maternos</br>
                <span class="tooltiptextx">... </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Cortipre" name='Cortipre'></input>
@@ -95,7 +95,7 @@
           
             <!-- Parto multiple -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Multiple pregnancy </br>
+                <div class="div1 tooltipx">Gestaci&oacuten m&uacuteltiple </br>
                <span class="tooltiptextx">  </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Pmult" name='Pmult' ></input>
@@ -105,8 +105,8 @@
 
               <!-- EMhGR -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe hyaline membrane disease </br>
-               <span class="tooltiptextx"> Surfactant 2 doses + positive pressure support or  1 surfactant + positive pressure support  + Fi02 > 0.3 </span>
+                <div class="div1 tooltipx">EMH Grave </br>
+               <span class="tooltiptextx">2 dosis surfactante + soporte con presi&oacuten positiva o dosis surfactante + soporte con presi&oacuten positiva + Fi02 > 0.3 </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  ></input>
                <label for="Emhgr">  </label>
@@ -115,8 +115,8 @@
           
               <!-- Neumot -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe pneumothorax </br>
-               <span class="tooltiptextx">With thoracic drainage  </span>
+                <div class="div1 tooltipx">Neumot&oacuterax grave </br>
+               <span class="tooltiptextx">Con drenaje tor&aacutecico  </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Neumot" name='Neumot'  ></input>
                <label for="Neumot">  </label>
@@ -125,8 +125,8 @@
 
               <!-- Hiv -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Intrventricular hemorrage </br>
-               <span class="tooltiptextx"> Any grade </span>
+                <div class="div1 tooltipx">Hemorragia intraventicular </br>
+               <span class="tooltiptextx"> Cualquier grado </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Hiv" name='Hiv'  ></input>
                <label for="Hiv"> </label>
@@ -135,8 +135,8 @@
      
               <!-- Hiv grave-->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">3-4 grades intraventricular hemorrage </br>
-               <span class="tooltiptextx">Grade 3 or 4  </span>
+                <div class="div1 tooltipx">Hemorragia intraventicular grave </br>
+               <span class="tooltiptextx">Grado 3 o afectaci&oacuten parenquimatosa </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Hivgr" name='Hivgr' ></input>
                <label for="Hivgr">  </label>
@@ -145,8 +145,8 @@
 
               <!-- Eneterocolitis -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Necrotizing enterocolitis </br>
-               <span class="tooltiptextx">Any </span>
+                <div class="div1 tooltipx">ECN </br>
+               <span class="tooltiptextx">Cualquier grado </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Entoroco" name='Entoroco' ></input>
                <label for="Entoroco">  </label>
@@ -155,8 +155,8 @@
 
             <!-- Ecngr -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe necrotizing enterocolitis </br>
-               <span class="tooltiptextx">Abdominal drainage or abdominal surgery</span>
+                <div class="div1 tooltipx">ECN grave </br>
+               <span class="tooltiptextx">Con drenaje abdominal o cirug&iacutea abdominal </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Ecngr" name='Ecngr'  ></input>
                <label for="Ecngr">  </label>
@@ -165,8 +165,8 @@
             
               <!-- Sepsisgr -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe systemic infection </br>
-               <span class="tooltiptextx">Blood culture + shock or hypotension or meningitis </span>
+                <div class="div1 tooltipx">Sepsis grave </br>
+               <span class="tooltiptextx">Hemocultivo + con shock o hipotension o meningitis </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Sepsisgr" name='Sepsisgr' ></input>
                <label for="Sepsisgr">  </label>
@@ -175,8 +175,8 @@
 
             <!-- Anemia grave-->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe Anemia </br>
-               <span class="tooltiptextx">Reuquiring transfusion </span>
+                <div class="div1 tooltipx">Anemia con transfusi&oacuten </br>
+               <span class="tooltiptextx">Requiere transfusi&oacuten de hemat&iacutees </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Anemia" name='Anemia' ></input>
                <label for="Anemia">  </label>
@@ -185,8 +185,8 @@
 
            <!-- Lmpvgr -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Cystic periventricular leukomalacia </br>
-               <span class="tooltiptextx">... </span>
+                <div class="div1 tooltipx">Leucomalacia periventricular grave </br>
+               <span class="tooltiptextx">Quistica </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Lmpvgr" name='Lmpvgr'></input>
                <label for="Lmpvgr">  </label>
@@ -195,8 +195,8 @@
             
               <!-- Dbp -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Bronchopulmonar dysplasia</br>
-               <span class="tooltiptextx">...</span>
+                <div class="div1 tooltipx">Displasia broncopulmonar</br>
+               <span class="tooltiptextx">Ox&iacutegeno a los 28 d&iacuteas</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Dbp" name='Dbp' ></input>
                <label for="Dbp">  </label>
@@ -205,8 +205,8 @@
             
               <!-- Dbpgr grave-->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe bronchopulmonar  dysplasia</br>
-               <span class="tooltiptextx">... </span>
+                <div class="div1 tooltipx">Displasia broncopulmonar grave</br>
+               <span class="tooltiptextx">Ox&iacutegeno o presi&oacuten de soporte a las 36 semanas de edad postmenstrual </span>
                 </div>
                <div class="div2"><input type="checkbox" id="Dbpgr" name='Dbpgr' ></input>
                <label for="Dbpgr">  </label>
@@ -234,7 +234,7 @@
         <div class="col-md-4">
         </div>
         <div class="center">
-            <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index.html" class="btn btn-sm animated-button contact">Home</a> </div>
+            <div class="col-md-12 col-sm-4 col-xs-12"> <a href="../index_es.html" class="btn btn-sm animated-button contact">Home</a> </div>
         </div>
          <div class="center">
             <div class="col-md-12 col-sm-4 col-xs-12">
