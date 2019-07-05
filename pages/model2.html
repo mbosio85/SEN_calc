@@ -9,7 +9,7 @@
 </head>
 <body onload='updateSliders();'>
    <div class="container", id="title">
-	<h1 class="heading1 center"> Mortality prediction after the first 24 hours</h1> 
+	<h1 class="heading1 center"> Mortality prediction during the first 24 hours</h1> 
     </div>
 	  
     <div id="centerDiv">
@@ -17,7 +17,7 @@
         <form action="" id="totprob" onsubmit="return true;">
          <!-- continuous variables -->
         <div class='centerDiv'>
-              <div class="tooltipx" >Gestational age</div>
+              <div class="tooltipx" >Gestational age (w) </div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="23" max="35" value="28" class="slider" id="Edadges" onchange=updateSliders(2) />
@@ -38,7 +38,7 @@
       
          <!-- Temp ingreso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Admission temperature</div>
+              <div class="tooltipx" >Admission temperature (&#8451;)</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="30" max="40" value="36" step="0.1" class="slider" id="Temping" onchange=updateSliders(2) />
@@ -66,7 +66,7 @@
                   <div class="div2 custom-select" >
                   <select id="Sexo" name='Sexo' >
                      <option value="M">Male</option>
-                     <option value="F">Femeale</option>
+                     <option value="F">Female</option>
                   </select>  
                </div>
                </div>
@@ -119,8 +119,8 @@
     
               <!-- EMhGR energica -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Severe hyialine membrane disease </br>
-               <span class="tooltiptextx">...</span>
+                <div class="div1 tooltipx">Severe hyaline membrane disease </br>
+               <span class="tooltiptextx">(2 doses of surfactant + positive pressure support or 1 dose of surfactant + positive pressure support + FiO2> 0.3)</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  ></input>
                <label for="Emhgr"> </label>
