@@ -1,0 +1,507 @@
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+*{
+  margin : 0;
+  padding : 0;
+}
+
+  
+  .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.5em;
+  border-radius: 0.5em;   
+  background: #DDDDDD;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+    margin: 0 auto;
+   
+    
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 50%; 
+  background: #0074D9;
+  cursor: pointer;
+  
+}
+
+.slider::-moz-range-thumb {
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 50%;
+  background: #0074D9;
+  cursor: pointer;
+margin: 0 auto;}
+
+.clear{
+    clear:both;
+}
+
+/* The Magic Float Center Code */
+.centerDiv
+	{
+		width: 60%;
+		margin: 0 auto;
+		background-color:#FFFFFF ;
+		white-space:nowrap;
+
+	}
+	.div1
+	{
+		width: 50%;
+		background-color:#FFFFFF ;
+		float:left;
+		white-space:nowrap;
+                margin-bottom: 10px;
+                margin-top: 10px;
+	}
+	.div2
+	{
+		width: 50%;
+		background-color:#FFFFFF ;
+		float:left;
+		white-space:nowrap;
+    margin-bottom: 10px;
+    margin-top: 10px;
+	}
+
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+html {
+  overflow-y: scroll;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+.textOver:hover{
+	background-size: 110%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #353535;
+}
+.justify{
+	text-align: justify;
+}
+.center{
+	text-align: center;
+}
+.redtext{
+	color: #0074D9;
+}
+.heading1{
+	font-size: 60px;
+	font-weight: 600;
+}
+.logosize{
+	width: 50px;
+	height: 50px;
+	z-index: -1;
+}
+.logosize:hover{
+	fill: #0074D9;
+}
+p{
+	font-size: 16px;
+	text-align: justify;
+}
+
+/* Global Button Styles */
+a.animated-button:link, a.animated-button:visited, a.animated-button:hover {
+	position: relative;
+	display: block;
+	margin: 30px auto 0;
+	padding: 14px 15px;
+	color: #353535;
+	font-size:14px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	letter-spacing: .08em;
+	border-radius: 0;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+a.animated-button:link:after, a.animated-button:visited:after, a.animated-button:hover:after {
+  content: "";
+	position: absolute;
+  height: 0%;
+	left: 50%;
+  top: 50%;
+	width: 150%;
+  z-index: -1;
+  -webkit-transition: all 0.75s ease 0s;
+	-moz-transition: all 0.75s ease 0s;
+  -o-transition: all 0.75s ease 0s;
+  transition: all 0.75s ease 0s;
+}
+a.animated-button:link:hover, a.animated-button:visited:hover, a.animated-button.contact:hover {
+  color: #353535;
+	text-shadow: none;
+}
+a.animated-button:link:hover:after, a.animated-button:visited:hover:after, a.animated-button.contact:hover:after {
+  height: 550%;
+}
+a.animated-button:link, a.animated-button:visited {
+  position: relative;
+	display: block;
+  margin: 30px auto 0;
+  padding: 20px 15px;
+	color: #353535;
+  font-size:14px;
+	border-radius: 0;
+  font-weight: bold;
+	text-align: center;
+  text-decoration: none;
+	text-transform: uppercase;
+  overflow: hidden;
+	letter-spacing: .08em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* Victoria Buttons */
+a.animated-button.bio, a.animated-button.projects {
+	border: 2px solid #0074D9;
+	/*border: 2px solid white;*/
+	/*border-radius: 100px;*/
+}
+a.animated-button.contact{
+  border: 2px solid #0074D9;
+  position: relative;
+	display: block;
+  margin: 30px auto 0;
+  padding: 20px 15px;
+	color: #353535;
+  font-size:14px;
+	border-radius: 0;
+  font-weight: bold;
+	text-align: center;
+  text-decoration: none;
+	text-transform: uppercase;
+  overflow: hidden;
+	letter-spacing: .08em;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  
+  
+}
+a.animated-button.bio:after {
+	background: #0074D9;
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+}
+
+a.animated-button.projects:after {
+	background: #0074D9;
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	-webkit-transform: translateX(-50%) translateY(-50%) rotate(25deg);
+	transform: translateX(-50%) translateY(-50%) rotate(25deg);
+}
+
+a.animated-button.contact:after {
+	background: #0074D9;
+	/*opacity: .5;*/
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.gaia{
+  color: #572C7C;
+}
+.melonomics{
+  color: #FF7D11;
+}
+.prgdb{
+  color: #3c753d;
+}
+
+footer div {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+footer {
+	display:flex;
+	padding: 0%;
+}
+.center{
+	text-align: center;
+}
+
+/*  format don't know where from */
+.section{
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+.space{
+    padding-left:2em;
+}
+.skype{
+    width:200px;
+    height:100px;
+}
+
+
+
+
+/* switch */
+$primary: #0074D9 ;
+$primary-light: #947ADA;
+$gray: #9A9999;
+  
+.toggle
+{
+  content:"";
+  position: relative;
+  display: block;
+  width: 10em;
+  height: 2em;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0,0,0);
+}
+.toggle:before
+  {    content:"";
+    position: relative;
+    top: 0.1em;
+    left: 0.1em;
+    width: 2em;
+    height: 2em;
+    display: block;
+    background: $gray;
+    border-radius: 8px;
+    transition: background .2s ease;
+ }
+  span
+   {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2em;
+    height: 2em;
+    display: block;
+    background: white;
+    border-radius: 1em;
+    box-shadow: 0 3px 8px rgba($gray,.5);
+    transition: all .2s ease;
+    }
+    span:before
+    {   
+      content: "";
+      position: absolute;
+      display: block;
+      margin: -18px;
+      width: 56px;
+      height: 56px;
+      background: #0074D9;
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none;
+}
+#cbx:checked + .toggle
+ {
+  &:before
+    background: $primary-light
+    span
+    background: #0074D9;
+    transform: translateX(20px);
+    transition: all .2s cubic-bezier(.8,.4,.3,1.25), background .15s ease;
+    box-shadow: 0 3px 8px rgba($primary,.2);
+    &:before
+      transform: scale(1);
+      opacity: 0;
+      transition: all .4s ease;
+}
+//centering toggle
+.center
+{
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 20px);
+  }
+
+
+
+/* Tooltip container   - This works :) */
+.tooltipx {
+  position: relative;
+  display: inline-block;
+ 
+
+}
+
+/* Tooltip text */
+.tooltipx .tooltiptextx {
+  visibility: hidden;
+  width: auto;
+  height: auto;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+   padding: 5px 0;
+  border-radius: 6px;
+  top: 100%;
+  left: 50%; 
+  margin-left: -60px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipx:hover .tooltiptextx {
+  visibility: visible;
+  }
+
+
+
+
+
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+  content:'';
+	cursor: pointer;
+	content: 'No';
+	text-indent: -9999px;
+	width: 3.5em;
+	height: 1em;
+	background: grey;
+	display: block;
+	border-radius: 1em;
+	position: relative;
+}
+
+
+label:after {
+	content: 'Si'; 
+	position: absolute;
+	top: 0px;
+	left: 0.3em;
+	width: 1em;
+	height: 1em;
+	background: #fff;
+	border-radius: 1em;
+	transition: 0.01s;
+}
+
+input:checked + label {
+	background: #0074D9;
+  text-indent: 2em;
+  vertical-align: top;
+  content: 'No';
+  color: #0074D9;
+}
+
+input:checked + label:after {
+	left: calc(100% - 0.3em);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 8em;
+}
+
+
+
+/*  menu coritna */
+
+
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
