@@ -3,13 +3,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <title>Calculadora Modelo 2</title>
-    <script type="text/javascript" src="../js/app.js"></script>
-    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/app_es.js"></script>
+    <link href="../css/styles_es.css" rel="stylesheet" type="text/css" />
     <script>var modeltype = 2;</script> 
 </head>
 <body onload='updateSliders();'>
    <div class="container", id="title">
-	<h1 class="heading1 center"> Predicci&oacuten mortalidad al primer d&iacutea de vida</h1> 
+	<h1 class="heading1 center"> Predicci&oacute;n mortalidad al primer d&iacutea de vida</h1> 
     </div>
 	  
     <div id="centerDiv">
@@ -17,7 +17,7 @@
         <form action="" id="totprob" onsubmit="return true;">
          <!-- continuous variables -->
         <div class='centerDiv'>
-              <div class="tooltipx" >Edad Gestacional</div>
+              <div class="tooltipx" >Edad Gestacional (s)</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="23" max="32" value="28" class="slider" id="Edadges" onchange=updateSliders(2) />
@@ -38,7 +38,7 @@
       
          <!-- Temp ingreso -->
              <div class='centerDiv'>
-              <div class="tooltipx" >Temperatura al Ingreso</div>
+              <div class="tooltipx" >Temperatura al Ingreso (&#8451;)</div>
          </div>
          <div class='centerDiv'>
                <input type="range" min="30" max="40" value="36" step="0.1" class="slider" id="Temping" onchange=updateSliders(2) />
@@ -119,8 +119,8 @@
     
               <!-- EMhGR energica -->
             <div class="centerDiv" > 
-                <div class="div1 tooltipx">Membrana hialina </br>
-               <span class="tooltiptextx">...</span>
+                <div class="div1 tooltipx">EMH grave</br>
+               <span class="tooltiptextx">2 dosis surfactante + soporte con presión positiva o dosis surfactante + soporte con presión positiva + Fi02>0,3</span>
                 </div>
                <div class="div2"><input type="checkbox" id="Emhgr" name='Emhgr'  ></input>
                <label for="Emhgr"> </label>
@@ -151,7 +151,7 @@
    <div class='clear'></div>
   </body>
 
-<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="../js/app_es.js"></script>
 <script> updateSliders(2) </script>
 
 <footer>
