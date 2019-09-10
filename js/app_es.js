@@ -315,8 +315,14 @@ function calculateTotal_model4(model = model40){
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    divobj.innerHTML = "Exitus: "+totProb.toFixed(2).replace(".", ",") + "%";
- 
+    if(totProb < 0.13){  
+	    divobj.style.color = '#0d0'
+    divobj.innerHTML = "Exitus Score: "+totProb.toFixed(2).replace(".", ",")  + " --> Alive";  }
+    else{
+	    divobj.style.color = '#d00'
+	    divobj.innerHTML = "Exitus Score: "+totProb.toFixed(2).replace(".", ",")  + " --> Likely Exitus";
+    }
+     
  
 }
 
