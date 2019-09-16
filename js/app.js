@@ -168,11 +168,21 @@ function calculateTotal(model=model1)
          totProb = totProb + model.Sexo;
      }
           
-    totProb = (100)/(1 + Math.exp(-totProb));
+    totProb = (1)/(1 + Math.exp(-totProb));
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
+    if(totProb < 0.25){
+            divobj.style.color = '#0d0'
+            divobj.innerHTML = "Survival Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Very likely to survive";  }
+    else  if(totProb <0.55){
+            divobj.style.color = '#E7C518'
+            divobj.innerHTML = "Survival Score: "+totProb.toFixed(2).replace(".", ",")  + " <br /> Uncertain";
+    }else{
+            divobj.style.color = '#d00'
+            divobj.innerHTML = "Survival Score: "+totProb.toFixed(2).replace(".", ",")  + " <br /> Very likely not to survive";
+    }  
+//    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
 
 }
 
@@ -211,11 +221,23 @@ function calculateTotal_model2(model = model2)
          totProb = totProb + model.Sexo;
      }
     
-    totProb = (100)/(1 + Math.exp(-totProb));
+    totProb = (1)/(1 + Math.exp(-totProb));
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
+    if(totProb < 0.25){
+            divobj.style.color = '#0d0'
+    divobj.innerHTML = "Survival Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Very likely to survive";  }
+    else  if(totProb <0.55){
+            divobj.style.color = '#E7C518'
+            divobj.innerHTML = "Survival Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Uncertain";
+    }else{
+            divobj.style.color = '#d00'
+            divobj.innerHTML = "Survival Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Very likely not to survive";
+    }
+
+
+   //    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
 
 }
 
@@ -311,11 +333,44 @@ function calculateTotal_model4(model = model40){
 
     
    }
-    totProb = (100)/(1 + Math.exp(-totProb));
+    totProb = (1)/(1 + Math.exp(-totProb));
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
+    if (model.Diastot <= 30){
+	    if(totProb < 0.005){
+                divobj.style.color = '#0d0'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
+            else  if(totProb <0.013){
+                divobj.style.color = '#E7C518'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
+            }else  if(totProb <0.30){
+                divobj.style.color = '#EB8420'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
+            }else{
+                divobj.style.color = '#d00'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very low survival probability";
+            }
+    }else{
+            if(totProb < 0.02){
+                divobj.style.color = '#0d0'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
+            else  if(totProb <0.091){
+                divobj.style.color = '#E7C518'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
+            }else  if(totProb <0.25){
+                divobj.style.color = '#EB8420'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
+            }else{
+                divobj.style.color = '#d00'
+                divobj.innerHTML = "Survival Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very low survival probability";
+        }
+
+
+    }
+
+
+//    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
  
  
 }
