@@ -172,16 +172,19 @@ function calculateTotal(model=model1)
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    if(totProb < 0.25){
-            divobj.style.color = '#0d0'
-            divobj.innerHTML = "Mortality Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Very likely to survive";  }
-    else  if(totProb <0.55){
-            divobj.style.color = '#E7C518'
-            divobj.innerHTML = "Mortality Score: "+totProb.toFixed(2).replace(".", ",")  + " <br /> Uncertain";
-    }else{
-            divobj.style.color = '#d00'
-            divobj.innerHTML = "Mortality Score: "+totProb.toFixed(2).replace(".", ",")  + " <br /> Very likely not to survive";
-    }  
+    if(totProb < 0.160){
+                divobj.style.color = '#0d0'
+                divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
+            else  if(totProb <0.374){
+                divobj.style.color = '#E7C518'
+                divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
+            }else  if(totProb <0.564){
+                divobj.style.color = '#EB8420'
+                divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
+            }else{
+                divobj.style.color = '#d00'
+                divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very low survival probability";
+            } 
 //    divobj.innerHTML = "Death: "+totProb.toFixed(2).replace(".", ",") + "%";
 
 }
@@ -225,15 +228,18 @@ function calculateTotal_model2(model = model2)
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    if(totProb < 0.25){
-            divobj.style.color = '#0d0'
-    divobj.innerHTML = "Mortality Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Very likely to survive";  }
-    else  if(totProb <0.55){
-            divobj.style.color = '#E7C518'
-            divobj.innerHTML = "Mortality Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Uncertain";
+   if(totProb < 0.169){
+	divobj.style.color = '#0d0'
+	divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
+    else  if(totProb <0.420){
+	divobj.style.color = '#E7C518'
+	divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
+    }else  if(totProb <0.649){
+	divobj.style.color = '#EB8420'
+	divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
     }else{
-            divobj.style.color = '#d00'
-            divobj.innerHTML = "Mortality Score: "+totProb.toFixed(2).replace(".", ",")  + "<br /> Very likely not to survive";
+	divobj.style.color = '#d00'
+	divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very low survival probability";
     }
 
 
@@ -337,14 +343,14 @@ function calculateTotal_model4(model = model40){
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    if (model.Diastot <= 30){
-	    if(totProb < 0.005){
+    if (model.Diastot <= 30){    
+            if(totProb < 0.146){
                 divobj.style.color = '#0d0'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
-            else  if(totProb <0.013){
+            else  if(totProb <0.418){
                 divobj.style.color = '#E7C518'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
-            }else  if(totProb <0.30){
+            }else  if(totProb <0.746){
                 divobj.style.color = '#EB8420'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
             }else{
@@ -352,21 +358,19 @@ function calculateTotal_model4(model = model40){
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very low survival probability";
             }
     }else{
-            if(totProb < 0.02){
+            if(totProb < 0.0277){
                 divobj.style.color = '#0d0'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
-            else  if(totProb <0.091){
+            else  if(totProb <0.114){
                 divobj.style.color = '#E7C518'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
-            }else  if(totProb <0.25){
+            }else  if(totProb <0.29){
                 divobj.style.color = '#EB8420'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
             }else{
                 divobj.style.color = '#d00'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very low survival probability";
         }
-
-
     }
 
 
