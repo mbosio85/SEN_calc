@@ -56,57 +56,57 @@ model3.Emhgr = 	0.2651866;
 
 //Model4 : Mortality w/ days and features
 var model40=[];
-model40.Intercept=	5.1659655;
-model40.Pmult	=0.2898969;
-model40.Edadges	=-0.1611302;
-model40.Cortipre	 =-0.2027747;
-model40.Toxemia =	-0.2303313;
-model40.Apgar5 =	-0.1972051;
-model40.Peso100 =	-0.2659444;
-model40.Emhgr =	0.1304168;
-model40.Neumot =	0.5997219;
-model40.Entoroco =	1.2482592;
-model40.Sepsisgr = 	1.2099799;
-model40.Hiv = 	0.6221995;
-model40.Hivgr	=0.7881896;
-model40.Diastot = 	-0.0346462;
+model40.Intercept=	6.626619;
+model40.Pmult	=0.296523;
+model40.Edadges	=-0.162709;
+model40.Cortipre	 =-0.306214;
+model40.Toxemia =	-0.366932;
+model40.Apgar5 =	-0198088
+model40.Peso100 =	-0.321967;
+model40.Emhgr =	0.131572
+model40.Neumot =	0.859499;
+model40.Entoroco =	1.58391;
+model40.Sepsisgr = 	1.082574;
+model40.Hiv = 	0.46974;
+model40.Hivgr	=1.55144;
+model40.Diastot = 	-0.049411;
+
 
 //Model4 : Mortality w/ days and features <=30 days
 var model41=[];
-model41.Intercept=	4.883602;
-model41.Pmult = 	0.295157;
-model41.Edadges	=-0.129602;
-model41.Cortipre=	-0.127406;
-model41.Toxemia=	-0.380772;
-model41.Apgar5	=-0.168275;
-model41.Peso100	=-0.31304;
-model41.Emhgr	= 0.200052;
-model41.Neumot	= 0.788659;
-model41.Entoroco	= 1.285659;
-model41.Sepsisgr =	1.177008;
-model41.Hiv=	0.550903;
-model41.Hivgr=	1.075111;
-model41.Diastot =	-0.069725;
+model41.Intercept=	6.626619;
+model41.Pmult	=0.296523;
+model41.Edadges	=-0.162709;
+model41.Cortipre	 =-0.306214;
+model41.Toxemia =	-0.366932;
+model41.Apgar5 =	-0198088
+model41.Peso100 =	-0.321967;
+model41.Emhgr =	0.131572
+model41.Neumot =	0.859499;
+model41.Entoroco =	1.58391;
+model41.Sepsisgr = 	1.082574;
+model41.Hiv = 	0.46974;
+model41.Hivgr	=1.55144;
+model41.Diastot = 	-0.049411;
 	
 //Model4 : Mortality w/ days and features > 30 days
 var model42=[];
-model42.Intercept=	0.6622001;
-model42.Pmult = 	0.157251;
-model42.Edadges	=-0.1409515;
-model42.Cortipre=	-0.3791902;
-model42.Apgar5	=-0.2353728;
-model42.Peso100	=-0.1025913;
-model42.Neumot=	0.1143688;
-model42.Entoroco =	0.4822363;
-model42.Sepsisgr =	1.1187948;
-model42.Hiv = 	0.6788402;
-model42.Diastot =	-0.0098567;
-model42.Dbp =	1.0467622;
-model42.Dbpgr	=0.486213;
-model42.Anemia	=0.685079;
-model42.Ecngr =	0.8870194;
-model42.Lmpvgr =	0.5444839;
-
+model42.Intercept=	2.097003;
+model42.Pmult = 	0.177383;
+model42.Edadges	=-0.189666;
+model42.Cortipre=	-0.290679;
+model42.Apgar5	=-0.152273;
+model42.Peso100	=-0.173882;
+model42.Neumot=	0.529165;
+model42.Entoroco =	1.393368;
+model42.Sepsisgr =	1.478962;
+model42.Hivgr = 	0.555501;
+model42.Diastot =	-0.003596;
+model42.Dbp =	1.187435;
+model42.Dbpgr	=0;
+model42.Anemia	=0.535424;
+model42.Ecngr =	0.129897;
+model42.Lmpvgr =	0.655049;
 
 //Variables with multiple choices:
 // Cortimat: No - Parcial - Completo
@@ -311,16 +311,16 @@ function calculateTotal_model4(model = model40){
     if(document.forms.totprob.Sepsisgr.checked){
         totProb = totProb + model.Sepsisgr;
      }
-    if(document.forms.totprob.Hiv.checked){
-        totProb = totProb + model.Hiv;
+    if(document.forms.totprob.Hivgr.checked){
+        totProb = totProb + model.Hivgr;
      }
 
     if(document.forms.totprob.Dbp.checked){
         totProb = totProb + model.Dbp;
      }
-    if(document.forms.totprob.Dbpgr.checked){
-        totProb = totProb + model.Dbpgr;
-     }
+    //if(document.forms.totprob.Dbpgr.checked){
+    //    totProb = totProb + model.Dbpgr;
+    //}
     if(document.forms.totprob.Anemia.checked){
         totProb = totProb + model.Anemia;
      }
