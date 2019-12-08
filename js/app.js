@@ -177,13 +177,13 @@ function calculateTotal(model=model1)
     //display the result
     var divobj = document.getElementById('totProb');
     divobj.style.display='block';
-    if(totProb < 0.160){
+    if(totProb < 0.158){
                 divobj.style.color = '#0d0'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Very high survival probability";  }
-            else  if(totProb <0.374){
+            else  if(totProb <0.368){
                 divobj.style.color = '#E7C518'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> High survival probability";
-            }else  if(totProb <0.564){
+            }else  if(totProb <0.567){
                 divobj.style.color = '#EB8420'
                 divobj.innerHTML = "Mortality Score: "+totProb.toFixed(3).replace(".", ",")  + "<br /> Low survival probability";
             }else{
