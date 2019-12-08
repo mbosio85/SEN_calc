@@ -18,13 +18,14 @@ var output = document.getElementById("demo");
   model1old.CortimatCompleto=-1.07648;
 
 var model1=[];
- model1.Intercept=16.76112;
- model1.Edadges=-0.64483;
- model1.Cir10=0.97031;
- model1.CortimatParcial=-0.70134;
- model1.CortimatCompleto=-1.07892;
- model1.Sexo=	0.07106;
- model1.Nivelas=	0.48368;
+ model1.Intercept=16.80431;
+ model1.Edadges=-0.64997;
+ model1.Cir10=0.98776;
+ model1.CortimatParcial=-0.70506;
+ model1.CortimatCompleto=-1.09438;
+ model1.Sexo=	0.07576;
+ model1.Nivelas=	0.50431;
+ model1.pmult = 0.29865;
 
 
 //Model2 : Hospital mortality 24h
@@ -166,6 +167,10 @@ function calculateTotal(model=model1)
     
     if (document.forms.totprob.Sexo.value == 'M'){
          totProb = totProb + model.Sexo;
+     }
+	
+    if(document.forms.totprob.pmult.checked){
+        totProb = totProb + model.pmult;
      }
           
     totProb = (1)/(1 + Math.exp(-totProb));
